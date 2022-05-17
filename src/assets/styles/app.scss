@@ -1,0 +1,37 @@
+
+
+// Third pirty style files
+// Sidebar Scroll
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+// Rich Text Editor
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+// Drag and Drop
+@import '~dragula/dist/dragula.css';
+
+
+
+// Main Variables File
+@import "scss/variables";
+
+@import "scss/mixins/mixins";
+@import "scss/colors";
+
+@import "scss/animations";
+
+// Open _themes.scss and remove unnecessary theme files
+@import "scss/themes/themes";
+
+@import "scss/utilities/utilities";
+@import "scss/components/components";
+
+
+@import "scss/page-layouts";
+
+// Open _main.scss and keep files which are required for your current layout.
+@import "scss/main/main";
+
+
+
+

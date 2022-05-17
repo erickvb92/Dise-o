@@ -1,0 +1,43 @@
+<div class="sidebar-panel">
+  <div id="scroll-area" [perfectScrollbar] class="navigation-hold" fxLayout="column">
+    <div class="sidebar-hold">
+        
+      <!-- App Logo -->
+      <div class="branding">
+        <img src="assets/images/logos/logo.png" alt="" class="app-logo">
+        <span class="app-logo-text app-logo-color">Santander</span>
+        
+        <span style="margin: auto" *ngIf="layoutConf.sidebarStyle !== 'compact'"></span>
+        
+        <div 
+          class="sidebar-compact-switch"
+          [ngClass]="{active: layoutConf.sidebarCompactToggle}"
+          (click)="toggleCollapse()" 
+          *ngIf="layoutConf.sidebarStyle !== 'compact'">
+          <span></span>
+        </div>
+      </div>
+    
+      <!-- Sidebar user -->
+
+      <div class="app-user" *ngIf = "usuarioLogeado">
+        <!-- datos usuario -->
+        <div class="app-user-photo">
+          <img src="assets/images/face-1.png" class="mat-elevation-z1" alt="">
+        </div>
+        <span class="app-user-name mb-05">
+          <mat-icon class="icon-xs text-muted">lock</mat-icon> 
+          {{usuarioLogeado.nombre}} {{usuarioLogeado.apellidoPaterno}} {{usuarioLogeado.apellidoMaterno}}
+        </span>
+        <!-- end datos usuario  -->
+
+      </div>
+      <!-- Navigation -->
+      <app-sidenav 
+        [items]="menuItems" 
+        [hasIconMenu]="hasIconTypeMenuItem" 
+        [iconMenuTitle]="iconTypeMenuTitle">
+      </app-sidenav>
+    </div>
+  </div>
+</div>
