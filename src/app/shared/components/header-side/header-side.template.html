@@ -6,7 +6,7 @@
     id="sidenavToggle"
     (click)="toggleSidenav()"
     matTooltip="Ocultar / Abrir"
-  >
+  > 
     <mat-icon style="color: black;">menu</mat-icon>
   </button>
   
@@ -54,9 +54,10 @@
     [matMenuTriggerFor]="accountMenu"
     class="topbar-button-right img-button"
   >
-    <img src="assets/images/face-1.png" alt="" />
+  <mat-icon style="color: rgb(255, 0, 0);">exit_to_app</mat-icon>
+  <label style="color: rgb(255, 0, 0);" >Salir</label>
   </button>
-
+  
   <mat-menu #accountMenu="matMenu">
     <!-- <button mat-menu-item [routerLink]="['/perfil', idCurrentUser]"> -->
     <!--button mat-menu-item routerLink="/perfil/{{idCurrentUser}}/inicio/{{idCurrentUser}}">

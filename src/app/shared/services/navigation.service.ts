@@ -51,9 +51,10 @@ export class NavigationService {
        state: "dialogs",
        sub: [
          { id:"61", name: "Catalogos de puestos", state: "confirm" },
-         { id:"61", name: "Perfiles", state: "confirm" },
-         { id:"61", name: "Centro de Costos", state: "confirm" },
-         { id:"61", name: "Parametros", state: "confirm" },
+         { id:"62", name: "Perfiles", state: "confirm" },
+         { id:"63", name: "Grupos",  state: "grupos" },
+         { id:"64", name: "Centro de Costos", state: "confirm" },
+         { id:"65", name: "Parametros", state: "confirm" },
        ]
      },
      {

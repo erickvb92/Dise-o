@@ -6,8 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { SharedPipesModule } from 'app/shared/pipes/shared-pipes.module';
 
-import { DashboardRoutes } from "./dashboard.routing";
-import { DefaultDashboardComponent } from './default-dashboard/default-dashboard.component';
+import { GroupRoutes } from "./group.routing";
+import { GroupComponent } from './group/group.component';
 
 @NgModule({
   imports: [
@@ -16,11 +16,11 @@ import { DefaultDashboardComponent } from './default-dashboard/default-dashboard
     FlexLayoutModule,
     NgxEchartsModule,
     SharedPipesModule,
-    RouterModule.forChild(DashboardRoutes)
+    RouterModule.forChild(GroupRoutes)
   ],
-  declarations: [DefaultDashboardComponent],
+  declarations: [GroupComponent],
   exports: []
 })
-export class DashboardModule {
+export class GroupModule {
 
 }

@@ -6,8 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { SharedPipesModule } from 'app/shared/pipes/shared-pipes.module';
 
-import { DashboardRoutes } from "./dashboard.routing";
-import { DefaultDashboardComponent } from './default-dashboard/default-dashboard.component';
+import {  AdministracionRoutes } from "./administracion.routing";
+import {  AdministracionComponent } from './Administracion/administracion.component';
 
 @NgModule({
   imports: [
@@ -16,11 +16,11 @@ import { DefaultDashboardComponent } from './default-dashboard/default-dashboard
     FlexLayoutModule,
     NgxEchartsModule,
     SharedPipesModule,
-    RouterModule.forChild(DashboardRoutes)
+    RouterModule.forChild(AdministracionRoutes)
   ],
-  declarations: [DefaultDashboardComponent],
+  declarations: [AdministracionComponent],
   exports: []
 })
-export class DashboardModule {
+export class AdministracionModule {
 
 }

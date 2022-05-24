@@ -31,7 +31,7 @@ export class UsuariosService {
   }
 
   getUsuarioObservable(id:number){
-    let viewEmploye: ViewEmploye ={idEmpleado:1,nombre:"pepe picas",idPerfil:1,perfilName:"supervisor"}
+    let viewEmploye: ViewEmploye ={idEmpleado:1,nombre:"n827743",idPerfil:1,perfilName:"supervisor"}
     this.usuario = viewEmploye;
     this.refresh();
   }

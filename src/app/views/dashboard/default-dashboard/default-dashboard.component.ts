@@ -33,17 +33,18 @@ export class DefaultDashboardComponent implements OnInit {
 
   loadTotalOffer(){
     
+   
     this.totalesOferta.push({id:1,cantidadInicial:5,cantidadfinal:7,color:"#ffffff",
-    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:10,selected:false,titulo:"hola",icono:"settings_backup_restore"});
+    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:1000,selected:false,titulo:"Total Reglas guardadas",icono:"settings_backup_restore"});
     
     this.totalesOferta.push({id:1,cantidadInicial:5,cantidadfinal:7,color:"#ffffff",
-    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:10,selected:false,titulo:"hola",icono:"settings_backup_restore"});
+    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:1000,selected:false,titulo:"Total Reglas Pendientes",icono:"settings_backup_restore"});
 
     this.totalesOferta.push({id:1,cantidadInicial:5,cantidadfinal:7,color:"#ffffff",
-    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:10,selected:false,titulo:"hola",icono:"settings_backup_restore"});
+    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:1000,selected:false,titulo:"Total Reglas Aceptadas",icono:"settings_backup_restore"});
 
     this.totalesOferta.push({id:1,cantidadInicial:5,cantidadfinal:7,color:"#ffffff",
-    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:10,selected:false,titulo:"hola",icono:"settings_backup_restore"});
+    fechaFinal:"2022-01-01",fechaInicial:"2022-01-01",dias:5,total:1000,selected:false,titulo:"Total Reglas Rechazadas",icono:"settings_backup_restore"});
 
    
   }

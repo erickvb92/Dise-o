@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
+import { GroupComponent } from './views/Catalogos/group/group.component';
+import { AdministracionComponent } from './views/Configuracion/Administracion/administracion.component';
 
 export const rootRouterConfig: Routes = [
   { 
@@ -30,7 +32,28 @@ export const rootRouterConfig: Routes = [
       }
     ]
   },
- 
+  {
+    path: '', 
+    component: AdminLayoutComponent,
+    children: [
+      { 
+        path: 'dialogs/grupos', 
+        loadChildren: () => import('./views/Catalogos/group.module').then(m => m.GroupModule),
+        data: { title: 'dialogs'} 
+      }
+    ]
+  },
+  {
+    path: '', 
+    component: AdminLayoutComponent,
+    children: [
+      { 
+        path: 'component/buttons', 
+        loadChildren: () => import('./views/Configuracion/administracion.module').then(m => m.AdministracionModule),
+        data: { title: 'adminitracion'} 
+      }
+    ]
+  },
   { 
     path: '**', 
     redirectTo: 'sessions/404'
