@@ -93,6 +93,7 @@ export class HeaderSideComponent implements OnInit {
   }
 
   logOut(){
+    localStorage.removeItem('currentUser');
     this.useAlerts('Sesión Finalizada', ' ', 'success-dialog');
     this.autenticacionService.logout();
     this.router.navigate(['/login']);

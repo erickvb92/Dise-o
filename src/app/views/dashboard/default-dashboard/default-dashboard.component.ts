@@ -15,6 +15,7 @@ import tinyColor from 'tinycolor2';
 export class DefaultDashboardComponent implements OnInit {
 
   totalesOferta:ViewTotalOferta[]=new Array();
+  user = localStorage.getItem('currentUser');
 
   constructor(
     private dashboardService: DashboardService,private snackBar: MatSnackBar,
@@ -24,7 +25,14 @@ export class DefaultDashboardComponent implements OnInit {
 
 
   ngOnInit() {
+   if(this.user !== "santander"){
+      this.redirectLogin();
+   }
     this.loadTotalOffer();
+  }
+
+  redirectLogin(){
+    this.router.navigate(['/login']);
   }
 
   redirectOferta(opcionSelected:number){
