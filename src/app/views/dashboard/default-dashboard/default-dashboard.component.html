@@ -1,5 +1,9 @@
 <!-- Dashboard card row -->
+
+
+
 <div fxLayout="row wrap" >
+  
   
   <div *ngFor="let item of totalesOferta;" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
     <mat-card style="padding-bottom:0px !important">
@@ -25,32 +29,26 @@
     </mat-card>
   </div>
 
+  
+
 </div>
 
 <!-- Fullwidth chart -->
-<!--div fxLayout="row wrap" [@animate]="{value:'*',params:{y:'25px',delay:'300ms'}}">
+<div fxLayout="row wrap" [@animate]="{value:'*',params:{y:'25px',delay:'300ms'}}">
   <div fxFlex="100">
     <mat-card class="default">
       <mat-card-title class="">
-        <span>Orders</span>
+        <span>Reglas</span>
         <span fxFlex></span>
       </mat-card-title>
-      <mat-card-subtitle>Orders vs New user registrations</mat-card-subtitle>
-      <mat-card-content class="p-0" [style.height]="'240px'">
-        <canvas 
-          height="240"
-          baseChart 
-          class="chart m-0"
-          [datasets]="lineChartSteppedData"
-          [labels]="lineChartLabels"
-          [options]="lineChartOptions"
-          [colors]="lineChartColors"
-          [legend]="lineChartLegend"
-          [chartType]="lineChartType"></canvas>
+      <mat-card-subtitle>Datos de santander</mat-card-subtitle>
+    
+      <mat-card-content class="p-0" [style.height]="'320px'">
+        <canvas id="myChart"></canvas>
       </mat-card-content>
     </mat-card>
   </div>
-</div-->
+</div>
 
 <div fxLayout="row wrap">
   <!-- Gallery and chart column -->
@@ -299,3 +297,4 @@
   </div-->
   <!-- End tables and users column -->
 </div>
+

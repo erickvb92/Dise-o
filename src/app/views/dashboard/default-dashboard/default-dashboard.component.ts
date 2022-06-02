@@ -5,6 +5,7 @@ import { egretAnimations } from 'app/shared/animations/egret-animations';
 import { ViewTotalOferta } from 'app/shared/models/dashboard/ViewTotalOferta';
 import { DashboardService } from 'app/shared/services/dashboard.service';
 import tinyColor from 'tinycolor2';
+import * as Chart from 'chart.js'
 
 @Component({
   selector: 'app-default-dashboard',
@@ -66,5 +67,32 @@ export class DefaultDashboardComponent implements OnInit {
     });
   }
 
- 
+  title = 'angular8chartjs';
+  canvas: any;
+  ctx: any;
+  ngAfterViewInit() {
+    this.canvas = document.getElementById('myChart');
+    this.ctx = this.canvas.getContext('2d');
+    let myChart = new Chart(this.ctx, {
+      type: 'pie',
+      data: {
+          labels: ["New", "In Progress", "On Hold"],
+          datasets: [{
+              label: '# of Votes',
+              data: [1,2,3],
+              backgroundColor: [
+                  'rgba(255, 0, 0, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        responsive: false,
+        display:true
+      }
+    });
+  }
+  
 }
