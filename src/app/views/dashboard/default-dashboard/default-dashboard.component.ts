@@ -5,7 +5,7 @@ import { egretAnimations } from 'app/shared/animations/egret-animations';
 import { ViewTotalOferta } from 'app/shared/models/dashboard/ViewTotalOferta';
 import { DashboardService } from 'app/shared/services/dashboard.service';
 import tinyColor from 'tinycolor2';
-import * as Chart from 'chart.js'
+//import * as Chart from 'chart.js'
 
 @Component({
   selector: 'app-default-dashboard',
@@ -67,7 +67,7 @@ export class DefaultDashboardComponent implements OnInit {
     });
   }
 
-  title = 'angular8chartjs';
+  /*title = 'angular8chartjs';
   canvas: any;
   ctx: any;
   ngAfterViewInit() {
@@ -93,6 +93,6 @@ export class DefaultDashboardComponent implements OnInit {
         display:true
       }
     });
-  }
+  }*/
   
 }

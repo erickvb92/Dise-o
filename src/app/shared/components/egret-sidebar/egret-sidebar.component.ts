@@ -130,7 +130,7 @@ export class EgretSidebarComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribeAll.next();
+    //this.unsubscribeAll.next();
     this.unsubscribeAll.complete();
     this.sidebarHelperService.removeSidebar(this.name);
   }
